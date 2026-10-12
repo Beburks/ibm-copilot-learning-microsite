@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IBM x GitHub Copilot Learning Journey</title>
+  <link rel="stylesheet" href="assets/base.css">
+  <style>
+    :root { --l1: #1a7f37; --l2: #0969da; --l3: #8250df; --l4: #bc4c00; }
+    .c1 { --c: var(--l1); } .c2 { --c: var(--l2); } .c3 { --c: var(--l3); } .c4 { --c: var(--l4); }
+    .hero { padding: 3rem 0 2rem; }
+    .hero h1 { font-size: clamp(2rem, 4vw, 3rem); }
+    .journey-figure { margin: 1.5rem 0 0; }
+    .journey-figure img { display: block; width: 100%; height: auto; border-radius: 16px; }
+    .journey-figure figcaption { margin-top: .75rem; font-size: .9rem; color: var(--muted); }
+    #journey, #levels, #webinars, #showcase, #faq { scroll-margin-top: 90px; }
+    .level-grid { margin-top: 1.5rem; }
+    .level-card { border-top: 5px solid var(--c); }
+    .level-card h3 { color: var(--c); }
+    .level-card p { margin: 0; }
+    .level-card .level-label { font-size: .85rem; font-weight: 600; color: var(--muted); }
+    .level-card .btn { margin-top: auto; }
+    .level-card .pending { font-size: .8rem; color: var(--muted); margin-bottom: .5rem; }
+    .section-grid { margin-top: 1.5rem; }
+    .card .status { margin-top: auto; margin-bottom: 0; font-size: .85rem; color: var(--muted); }
+    .faq-list { margin-top: 1.5rem; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--ibm-blue); outline-offset: 4px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="./">IBM x GitHub Copilot <span>Learning Journey</span></a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#journey">The journey</a>
+        <a href="#levels">Find your courses</a>
+        <a href="#webinars">Live training</a>
+        <a href="#showcase">Showcase</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="journey" class="hero">
+      <div class="container">
+        <h1>Your GitHub Copilot learning journey</h1>
+        <p class="lede">Learn the concepts, practice the skills, and build with Copilot. Explore the journey below, then choose the level that fits your experience.</p>
+        <figure class="journey-figure">
+          <img src="assets/img/copilot-learning-journey.png" width="1778" height="1170" alt="GitHub Copilot capability progression from Beginner to Advanced/Expert: Learn with GitHub Modules, Practice with GitHub Skills, Build with GitHub Copilot across VS Code, Copilot CLI, GitHub Copilot App and Copilot Cloud Agent, Certify with the GitHub Copilot and Agentic AI Developer certifications, and Validate with Partner Delivery Credentials.">
+          <figcaption>Learning and certifications develop your own skills. Partner delivery credentials are a separate path for delivering to customers on behalf of GitHub.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="levels" class="section section--soft">
+      <div class="container">
+        <h2>Find the courses for your level</h2>
+        <p>Choose the description that sounds like you. You can start at any level or revisit earlier skills.</p>
+        <div class="grid grid-4 level-grid">
+          <article class="card level-card c1">
+            <h3>Beginner</h3>
+            <p class="level-label">I'm new to Copilot</p>
+            <p>Understand the basics, write your first prompts, and try Copilot in everyday development.</p>
+            <div class="spacer"></div>
+            <a class="btn btn--primary" href="pathways.html#beginner">View beginner courses</a>
+          </article>
+          <article class="card level-card c2">
+            <h3>Intermediate</h3>
+            <p class="level-label">I've tried the basics</p>
+            <p>Improve your prompts, customize your experience, and use Copilot for testing and code review.</p>
+            <div class="spacer"></div>
+            <a class="btn btn--primary" href="pathways.html#intermediate">View intermediate courses</a>
+          </article>
+          <article class="card level-card c3">
+            <h3>Proficient</h3>
+            <p class="level-label">I use Copilot regularly</p>
+            <p>Apply Copilot across projects, share context with your team, and prepare for certification.</p>
+            <div class="spacer"></div>
+            <a class="btn btn--primary" href="pathways.html#proficient">View proficient courses</a>
+          </article>
+          <article class="card level-card c4">
+            <h3>Advanced</h3>
+            <p class="level-label">I'm ready for agentic workflows</p>
+            <p>Explore agent mode, MCP integrations, and modernization with Copilot.</p>
+            <div class="spacer"></div>
+            <p class="pending">Proposed courses; level definition is being finalized.</p>
+            <a class="btn btn--primary" href="pathways.html#advanced">View advanced courses</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="webinars" class="section">
+      <div class="container">
+        <h2>Live training</h2>
+        <p>Learn with an instructor, practice together, and ask questions in real time.</p>
+        <p class="placeholder-note">Example session topics for this layout, not scheduled events. Confirmed dates, instructors, registration links, and recordings will appear here.</p>
+        <div class="grid grid-3 section-grid">
+          <article class="card">
+            <span class="tag tag--self">Beginner</span>
+            <h3>Getting started with Copilot</h3>
+            <p>A guided introduction to prompts and everyday development tasks.</p>
+            <p class="status">Date and registration to be confirmed</p>
+          </article>
+          <article class="card">
+            <span class="tag tag--self">Intermediate / Proficient</span>
+            <h3>Copilot in practice</h3>
+            <p>A hands-on workshop covering context, customization, testing, and code review.</p>
+            <p class="status">Date and registration to be confirmed</p>
+          </article>
+          <article class="card">
+            <span class="tag tag--deliver">Customer delivery</span>
+            <h3>Partner delivery preparation</h3>
+            <p>Explore how to apply Copilot skills when delivering on behalf of GitHub.</p>
+            <p class="status">Date and registration to be confirmed</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="showcase" class="section section--soft">
+      <div class="container">
+        <h2>Showcase your work</h2>
+        <p>Explore what peers are building and share links to your own repositories, demos, and lessons learned.</p>
+        <p class="placeholder-note">Example showcase slots. Links will be added as contributions are approved; these are not published projects.</p>
+        <div class="grid grid-3 section-grid">
+          <article class="card">
+            <span class="tag tag--self">Individual learning</span>
+            <h3>Projects and demos</h3>
+            <p>Show what you built with Copilot, your learning level, and what you learned along the way.</p>
+            <p class="status">Repository or demo link pending</p>
+          </article>
+          <article class="card">
+            <span class="tag tag--self">Individual learning</span>
+            <h3>Prompts and reusable workflows</h3>
+            <p>Share useful prompts, custom instructions, or agent workflows that others can try.</p>
+            <p class="status">Example or walkthrough link pending</p>
+          </article>
+          <article class="card">
+            <span class="tag tag--deliver">Customer delivery</span>
+            <h3>Customer engagement lessons</h3>
+            <p>Share an approved, anonymized case study with practical takeaways for other delivery practitioners.</p>
+            <p class="status">Case study link pending</p>
+          </article>
+        </div>
+        <p style="margin-top:1.5rem;margin-bottom:0">To contribute, include a title, your level, a link to the work, and a short takeaway. Submission details are coming soon. Customer examples must be anonymized and approved for sharing.</p>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-list">
+          <details class="faq">
+            <summary>Do I have to complete every level in order?</summary>
+            <div>No. Start with the level that matches your experience. If the topics feel unfamiliar, revisit the previous level.</div>
+          </details>
+          <details class="faq">
+            <summary>Where are the course links?</summary>
+            <div><a href="#levels">Choose a level</a>. Each pathway groups concept-based modules under Learn and hands-on exercises under Practice.</div>
+          </details>
+          <details class="faq">
+            <summary>What is the difference between certifications and partner delivery credentials?</summary>
+            <div>
+              <p><strong>Certifications validate your own knowledge and skills.</strong> For example, the <a href="pathways.html#proficient-certify">GitHub Copilot certification</a> is a milestone in the Proficient pathway.</p>
+              <p><strong>Partner delivery credentials validate your ability to deliver for customers on behalf of GitHub.</strong> They focus on customer engagements, including GitHub Copilot: Core Skills &amp; Application and GitHub Copilot: Deploying &amp; Scaling AI Across the Enterprise. A certification is not the same as a delivery credential.</p>
+              <p style="margin-bottom:0">You do not need a delivery credential for individual self-paced learning. Credential requirements and enrollment links will be added when confirmed.</p>
+            </div>
+          </details>
+          <details class="faq">
+            <summary>Do I need a delivery credential to learn?</summary>
+            <div>No. Delivery credentials are separate from individual learning and support customer engagements on behalf of GitHub.</div>
+          </details>
+          <details class="faq">
+            <summary>How do I join live training or share my work?</summary>
+            <div>Confirmed registration links will appear in <a href="#webinars">Live training</a>. Contribution instructions will appear in <a href="#showcase">Showcase your work</a>; neither is available yet.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">IBM x GitHub Copilot learning pathways</div>
+  </footer>
+</body>
+</html>

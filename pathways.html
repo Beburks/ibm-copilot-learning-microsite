@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning Pathways - IBM x GitHub Copilot Learning Journey</title>
+  <link rel="stylesheet" href="assets/base.css">
+  <style>
+    :root { --l1: #1a7f37; --l2: #0969da; --l3: #8250df; --l4: #bc4c00; }
+    .c1 { --c: var(--l1); } .c2 { --c: var(--l2); } .c3 { --c: var(--l3); } .c4 { --c: var(--l4); }
+    .hero { padding: 3rem 0 1.5rem; }
+    .back { font-size: .9rem; text-decoration: none; }
+    .jump { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: 1.25rem; }
+    .jump a { background: var(--c); color: #fff; text-decoration: none; font-weight: 600; font-size: .85rem; padding: .45rem .9rem; border-radius: 999px; }
+
+    .level { border-top: 6px solid var(--c); background: #fff; border-radius: var(--radius); box-shadow: 0 1px 0 var(--gh-border); padding: 1.75rem; margin-bottom: 1.75rem; scroll-margin-top: 72px; border-left: 1px solid var(--gh-border); border-right: 1px solid var(--gh-border); border-bottom: 1px solid var(--gh-border); }
+    .level-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+    .level-head h2 { color: var(--c); }
+    .level-head .outcome { font-size: .9rem; color: var(--muted); }
+    .level > p { color: var(--muted); max-width: 75ch; }
+    .level:target { outline: 3px solid var(--c); outline-offset: 4px; }
+    .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 1.25rem; margin-top: 1rem; }
+    .group { scroll-margin-top: 72px; }
+    .group h3 { font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--c); margin-bottom: .6rem; }
+    .group h3 span { color: var(--muted); font-weight: 400; letter-spacing: 0; text-transform: none; font-size: .85rem; }
+    .group:target { outline: 3px solid var(--c); outline-offset: 6px; border-radius: 6px; }
+    .links { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; }
+    .links a { display: block; border: 1px solid var(--gh-border); border-radius: 8px; padding: .75rem .9rem; text-decoration: none; color: var(--text); background: #fff; }
+    .links a:hover { border-color: var(--c); background: color-mix(in srgb, var(--c) 6%, #fff); }
+    .links strong { display: block; }
+    .links small { color: var(--muted); }
+    .src { font-size: .72rem; font-weight: 600; color: var(--c); text-transform: uppercase; letter-spacing: .06em; }
+    .cert a { border-style: dashed; border-color: var(--c); }
+    .cert-pending { display: block; border: 1px dashed var(--c); border-radius: 8px; padding: .75rem .9rem; background: #fff; }
+    .milestones { display: grid; align-content: start; gap: 1.25rem; }
+    .validate h3, .validate .src { color: var(--deliver); }
+    .validate > p { color: var(--muted); font-size: .9rem; }
+    .validate .portal-note { margin: .6rem 0 0; font-size: .75rem; color: var(--muted); }
+    .validate .links a { border-color: #c8b3f5; }
+    .validate .links a:hover { border-color: var(--deliver); background: color-mix(in srgb, var(--deliver) 6%, #fff); }
+    .pending { font-size: .8rem; color: var(--l4); font-weight: 600; }
+
+    .build { background: #fff; border: 1px solid var(--gh-border); color: var(--text); border-radius: var(--radius); padding: 1.75rem; margin-bottom: 1.75rem; scroll-margin-top: 72px; }
+    .build h2 { color: var(--text); }
+    .build p { color: var(--muted); }
+    .build .links a:hover { border-color: var(--ibm-blue); }
+    .build .links { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="./">IBM x GitHub Copilot <span>Learning Journey</span></a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="./#journey">The journey</a>
+        <a href="#beginner">Beginner</a>
+        <a href="#intermediate">Intermediate</a>
+        <a href="#proficient">Proficient</a>
+        <a href="#advanced">Advanced</a>
+        <a href="#build">Build</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section--soft">
+    <section class="hero">
+      <div class="container">
+        <a class="back" href="./#levels">&larr; Back to choosing your level</a>
+        <h1 style="margin-top:.75rem">Learning pathways</h1>
+        <p class="lede">Self-paced Learn and Practice links for each level. Start at the first level with skills you have not yet used, then build with GitHub Copilot on the surface you use most.</p>
+        <nav class="jump" aria-label="Jump to level">
+          <a class="c1" href="#beginner">Beginner</a>
+          <a class="c2" href="#intermediate">Intermediate</a>
+          <a class="c3" href="#proficient">Proficient</a>
+          <a class="c4" href="#advanced">Advanced</a>
+        </nav>
+      </div>
+    </section>
+
+    <div class="container" style="padding-bottom:4rem">
+
+      <!-- BEGINNER -->
+      <section id="beginner" class="level c1">
+        <div class="level-head"><h2>Beginner</h2><span class="outcome">Outcome: Build Knowledge</span></div>
+        <p>First contact and early hands-on use: what Copilot is, where it can be used, and how it fits into everyday development.</p>
+        <div class="cols">
+          <div id="beginner-learn" class="group">
+            <h3>Learn <span>GitHub Learn modules</span></h3>
+            <ul class="links">
+              <li><a href="https://learn.github.com/courses/responsibleAIwithGitHubCopilot"><span class="src">Module</span><strong>Responsible AI with GitHub Copilot</strong></a></li>
+              <li><a href="https://learn.github.com/courses/introductiontoGitHubCopilot"><span class="src">Module</span><strong>Introduction to GitHub Copilot</strong></a></li>
+              <li><a href="https://learn.github.com/courses/gitHubCopilotAcrossEnvironmentsIDEChatandCommandLineTechniques"><span class="src">Module</span><strong>GitHub Copilot Across Environments</strong></a></li>
+              <li><a href="https://learn.github.com/courses/introductiontopromptengineeringwithGitHubCopilot"><span class="src">Module</span><strong>Introduction to prompt engineering with GitHub Copilot</strong></a></li>
+            </ul>
+          </div>
+          <div id="beginner-practice" class="group">
+            <h3>Practice <span>GitHub Skills exercises</span></h3>
+            <ul class="links">
+              <li><a href="https://github.com/skills/getting-started-with-github-copilot"><span class="src">GitHub Skills</span><strong>Getting Started with GitHub Copilot</strong><small>Learn, build, debug, and ship faster with your AI pair programmer.</small></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERMEDIATE -->
+      <section id="intermediate" class="level c2">
+        <div class="level-head"><h2>Intermediate</h2><span class="outcome">Outcome: Gain Hands-on Experience</span></div>
+        <p>The Intermediate level has moved beyond first contact, having now experimented with Copilot in different situations and surfaces. An Intermediate is familiar with web-based collaboration features, core IDE features, model management, agent configuration, customization options, and techniques for managing context.</p>
+        <div class="cols">
+          <div id="intermediate-learn" class="group">
+            <h3>Learn <span>GitHub Learn modules</span></h3>
+            <ul class="links">
+              <li><a href="https://learn.github.com/courses/managementandcustomizationconsiderationswithGitHubCopilot"><span class="src">Module</span><strong>Management and customization considerations with GitHub Copilot</strong></a></li>
+              <li><a href="https://learn.github.com/courses/developerusecasesforAIwithGitHubCopilot"><span class="src">Module</span><strong>Developer use cases for AI with GitHub Copilot</strong></a></li>
+              <li><a href="https://learn.github.com/courses/LevelingUpCodeReviewsAndPullRequestsWithGitHubCopilot"><span class="src">Module</span><strong>Leveling up code reviews and pull requests with GitHub Copilot</strong></a></li>
+              <li><a href="https://learn.github.com/courses/IntroductionToMCPServer"><span class="src">Module</span><strong>Introduction to MCP Server</strong></a></li>
+              <li><a href="https://learn.github.com/courses/accelerateDevelopmentWithGitHubCopilotCodingAgent"><span class="src">Module</span><strong>Accelerate development with GitHub Copilot Cloud Agent</strong></a></li>
+            </ul>
+          </div>
+          <div id="intermediate-practice" class="group">
+            <h3>Practice <span>GitHub Skills exercises</span></h3>
+            <ul class="links">
+              <li><a href="https://github.com/skills/customize-your-github-copilot-experience"><span class="src">GitHub Skills</span><strong>Customize your GitHub Copilot Experience</strong></a></li>
+              <li><a href="https://github.com/skills/modernize-your-legacy-code-with-github-copilot"><span class="src">GitHub Skills</span><strong>Modernize your legacy code with GitHub Copilot</strong></a></li>
+              <li><a href="https://github.com/skills/copilot-code-review"><span class="src">GitHub Skills</span><strong>GitHub Copilot Code Review</strong></a></li>
+              <li><a href="https://github.com/skills/create-applications-with-the-copilot-cli"><span class="src">GitHub Skills</span><strong>Create Applications with the Copilot CLI</strong></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROFICIENT -->
+      <section id="proficient" class="level c3">
+        <div class="level-head"><h2>Proficient</h2><span class="outcome">Outcome: Prove Your Expertise</span></div>
+        <p>The Proficient level represents a developer who can practically apply GitHub Copilot across typical scenarios, demonstrated through consistent hands-on usage across multiple repositories and extended periods. A Proficient user can use many web and IDE features, select appropriate models, and apply customizations to tailor Copilot for specific project needs. They have experimented with extended features and are aware of extensibility and integration options.</p>
+        <div class="cols">
+          <div id="proficient-learn" class="group">
+            <h3>Learn <span>GitHub Learn modules</span></h3>
+            <ul class="links">
+              <li><a href="https://learn.github.com/courses/buildingapplicationswithGitHubCopilotagentmode"><span class="src">Module</span><strong>Building applications with GitHub Copilot agent mode</strong></a></li>
+              <li><a href="https://learn.github.com/courses/IntroductionToMCPServer"><span class="src">Module</span><strong>Introduction to MCP Server</strong></a></li>
+              <li><a href="https://learn.github.com/courses/usingadvancedGitHubCopilotfeatures"><span class="src">Module</span><strong>Using advanced GitHub Copilot features</strong></a></li>
+            </ul>
+          </div>
+          <div id="proficient-practice" class="group">
+            <h3>Practice <span>GitHub Skills exercises</span></h3>
+            <ul class="links">
+              <li><a href="https://github.com/skills/customize-your-github-copilot-experience"><span class="src">GitHub Skills</span><strong>Customize your GitHub Copilot Experience</strong></a></li>
+              <li><a href="https://github.com/skills/integrate-mcp-with-copilot"><span class="src">GitHub Skills</span><strong>Integrate MCP with GitHub Copilot</strong></a></li>
+              <li><a href="https://github.com/skills/build-applications-w-copilot-agent-mode"><span class="src">GitHub Skills</span><strong>Build applications with GitHub Copilot agent mode</strong></a></li>
+              <li><a href="https://github.com/skills/create-applications-with-the-copilot-cli"><span class="src">GitHub Skills</span><strong>Create applications with the Copilot CLI</strong></a></li>
+            </ul>
+          </div>
+          <div class="milestones">
+            <div id="proficient-certify" class="group cert">
+              <h3>Certify</h3>
+              <ul class="links">
+                <li><a href="https://learn.github.com/certification/COPILOT"><span class="src">Certification</span><strong>GitHub Copilot certification</strong><small>Validate your GitHub Copilot knowledge.</small></a></li>
+              </ul>
+            </div>
+            <div id="proficient-validate" class="group validate">
+              <h3>Validate <span>Partner Delivery Credentials*</span></h3>
+              <p>Validate your ability to deliver GitHub Copilot solutions for customers on behalf of GitHub.</p>
+              <ul class="links">
+                <li><a href="https://portal.github.partners/#/learning/certifications/8a99939d9c6323fd019caebf8b9758fc"><strong>GitHub Copilot: Core Skills &amp; Application Delivery Credential</strong></a></li>
+                <li><a href="https://portal.github.partners/#/learning/certifications/8a998d109e4d33bf019e6fabe39f4c9a"><strong>GitHub Copilot: Deploying &amp; Scaling AI Across the Enterprise Delivery Credential</strong></a></li>
+              </ul>
+              <p class="portal-note">* Access to the GitHub Partner Portal is required to access these delivery credential courses.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ADVANCED -->
+      <section id="advanced" class="level c4">
+        <div class="level-head"><h2>Advanced</h2><span class="outcome">Outcome: Design and govern agentic workflows</span></div>
+        <p>The Advanced level represents a practitioner who can design, orchestrate, and operate agentic AI workflows across the software development lifecycle. They define agent roles, boundaries, and success criteria; integrate tools and execution environments; coordinate multiple agents; manage memory, state, and evaluation; and apply governance, least-privilege access, human oversight, and operational safeguards. They can use these capabilities to advance their own work or support customer outcomes.</p>
+        <div class="cols">
+          <div id="advanced-learn" class="group">
+            <h3>Learn <span>Agentic AI modules</span></h3>
+            <ul class="links">
+              <li><a href="https://learn.microsoft.com/en-us/training/modules/foundations-agentic-ai/"><span class="src">Module</span><strong>Foundations of Agentic AI in GitHub</strong></a></li>
+              <li><a href="https://learn.microsoft.com/en-us/training/modules/design-agent-architecture-integration/"><span class="src">Module</span><strong>Designing Agent Architecture and SDLC Integration</strong></a></li>
+              <li><a href="https://learn.microsoft.com/en-us/training/modules/agent-tooling-mcp-execution-environments/"><span class="src">Module</span><strong>Tooling, MCP, and Agent Execution Environments</strong></a></li>
+              <li><a href="https://learn.microsoft.com/en-us/training/modules/multi-agent-systems-orchestration/"><span class="src">Module</span><strong>Multi-Agent Systems and Orchestration</strong></a></li>
+              <li><a href="https://learn.microsoft.com/en-us/training/modules/memory-state-evaluation/"><span class="src">Module</span><strong>Memory, State, and Evaluation</strong></a></li>
+              <li><a href="https://learn.microsoft.com/en-us/training/modules/governance-guardrails-operations/"><span class="src">Module</span><strong>Governance, guardrails, and operations</strong></a></li>
+            </ul>
+          </div>
+          <div id="advanced-practice" class="group">
+            <h3>Practice <span>Advanced GitHub Skills</span></h3>
+            <ul class="links">
+              <li><a href="https://github.com/skills/agentic-workflows-that-read-the-room"><span class="src">GitHub Skills</span><strong>Agentic Workflows that Read the Room</strong></a></li>
+              <li><a href="https://github.com/skills/agent-orchestration-build-your-ai-dream-team"><span class="src">GitHub Skills</span><strong>Agent Orchestration Build Your AI Dream Team</strong></a></li>
+            </ul>
+          </div>
+          <div id="advanced-certify" class="group cert">
+            <h3>Certify</h3>
+            <ul class="links">
+              <li><a href="https://learn.github.com/certification/AGENTIC"><span class="src">Certification</span><strong>GitHub Agentic AI Developer certification</strong></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- BUILD -->
+      <section id="build" class="build">
+        <h2>Build with GitHub Copilot</h2>
+        <p>Apply what you learn at every level on the surface that fits your work.</p>
+        <ul class="links">
+          <li><a href="https://code.visualstudio.com/docs/agents/overview"><strong>VS Code</strong><small>Build in your favorite IDE</small></a></li>
+          <li><a href="https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-cli"><strong>Copilot CLI</strong><small>Build and automate from the command line</small></a></li>
+          <li><a href="https://docs.github.com/en/copilot/concepts/copilot-surfaces/github-copilot-app"><strong>GitHub Copilot App</strong><small>Apply AI across your workflow</small></a></li>
+          <li><a href="https://docs.github.com/en/copilot/concepts/agents/cloud-agent"><strong>Copilot Cloud Agent</strong><small>Delegate and scale with agents</small></a></li>
+        </ul>
+      </section>
+
+      <p class="placeholder-note">Beginner, Intermediate, and Proficient Learn and Practice, and Advanced Learn and Practice, follow the provided module and skill links. Other course-to-level mapping is proposed for review against the Partner GHCP Learning Path document.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><a href="./#levels">Choose a different level</a> &middot; <a href="./">Journey overview</a></div>
+  </footer>
+</body>
+</html>
