@@ -14,4 +14,4 @@ The site is served from the repository root. The landing page is `index.html`, w
 - Live training dates, registration links, and showcase contributions will appear as confirmed.
 - Partner Delivery Credential courses require access to the GitHub Partner Portal.
 - Seller resource details and external links are placeholders pending confirmation. Sales Credentials are distinct from certifications and Partner Delivery Credentials.
-- Module and skill completion estimates are sourced from official course descriptions, duration metadata, or GitHub Skills READMEs. Published ranges and qualifiers are preserved; times are omitted when not listed by the source.
+- Module and skill completion estimates use `(Est. completion time: ... min)` and are sourced from official course descriptions, duration metadata, or GitHub Skills READMEs. Hours are converted to minutes; upper bounds and ranges are preserved (for example, `<60 min` or `90–120 min`). Times are omitted when not listed by the source.
