@@ -13,7 +13,12 @@
     .journey-figure { margin: 1.5rem 0 0; }
     .journey-figure img { display: block; width: 100%; height: auto; border-radius: 16px; }
     .journey-figure figcaption { margin-top: .75rem; font-size: .9rem; color: var(--muted); }
-    #journey, #levels, #webinars, #showcase, #faq { scroll-margin-top: 90px; }
+    #audiences, #journey, #levels, #webinars, #showcase, #faq { scroll-margin-top: 90px; }
+    .audience-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 1.5rem; }
+    .audience-card { border-top: 5px solid var(--ibm-blue); }
+    .audience-card .btn { margin-top: auto; }
+    .user-journey { padding-top: 1rem; }
+    @media (max-width: 640px) { .audience-grid { grid-template-columns: 1fr; } }
     .level-grid { margin-top: 1.5rem; }
     .level-card { border-top: 5px solid var(--c); }
     .level-card h3 { color: var(--c); }
@@ -32,8 +37,9 @@
     <div class="container">
       <a class="brand" href="./">IBM x GitHub Copilot <span>Learning Journey</span></a>
       <nav class="site-nav" aria-label="Primary">
+        <a href="#audiences">Choose your journey</a>
         <a href="#journey">The journey</a>
-        <a href="#levels">Find your courses</a>
+        <a href="sales.html">Seller resources</a>
         <a href="#webinars">Live training</a>
         <a href="#showcase">Showcase</a>
         <a href="#faq">FAQ</a>
@@ -42,10 +48,30 @@
   </header>
 
   <main>
-    <section id="journey" class="hero">
+    <section id="audiences" class="hero">
       <div class="container">
         <h1>Your GitHub Copilot learning journey</h1>
-        <p class="lede">Learn the concepts, practice the skills, and build with Copilot. Explore the journey below, then choose the level that fits your experience.</p>
+        <p class="lede">Build the knowledge you need to use, build with, or sell GitHub Copilot. Choose the journey that fits your goal, and explore both whenever you need.</p>
+        <h2>What do you want to do?</h2>
+        <div class="grid audience-grid">
+          <article class="card audience-card">
+            <h3>Use &amp; build with Copilot</h3>
+            <p>Develop your own Copilot skills and, when relevant, prepare to deliver customer engagements.</p>
+            <a class="btn btn--primary" href="#journey">Explore the user journey</a>
+          </article>
+          <article class="card audience-card">
+            <h3>Sell GitHub Copilot</h3>
+            <p>Build the knowledge to discover customer needs, communicate value, and guide the next conversation.</p>
+            <a class="btn btn--primary" href="sales.html">Explore the sales journey</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="journey" class="section user-journey">
+      <div class="container">
+        <h2>Use &amp; build with Copilot</h2>
+        <p class="lede">Everyone can use and build with Copilot, including sellers. Explore the user journey below to learn the concepts, practice the skills, and build at the level that fits your experience.</p>
         <figure class="journey-figure">
           <img src="assets/img/copilot-learning-journey.png" width="1778" height="1170" alt="GitHub Copilot capability progression from Beginner to Advanced: Learn with GitHub Modules, Practice with GitHub Skills, Build with GitHub Copilot across VS Code, Copilot CLI, GitHub Copilot App and Copilot Cloud Agent, Certify with the GitHub Copilot and Agentic AI Developer certifications, and Validate with Partner Delivery Credentials.">
           <figcaption>Learning and certifications develop your own skills. Partner delivery credentials are a separate path for delivering to customers on behalf of GitHub.</figcaption>
@@ -94,7 +120,7 @@
     <section id="webinars" class="section">
       <div class="container">
         <h2>Live training</h2>
-        <p>Learn with an instructor, practice together, and ask questions in real time.</p>
+        <p>Learn with an instructor, practice together, and ask questions in real time. Look for the audience label to find sessions for Copilot users, customer delivery, or sellers.</p>
         <p class="placeholder-note">Example session topics for this layout, not scheduled events. Confirmed dates, instructors, registration links, and recordings will appear here.</p>
         <div class="grid grid-3 section-grid">
           <article class="card">
@@ -110,6 +136,12 @@
             <p class="status">Date and registration to be confirmed</p>
           </article>
           <article class="card">
+            <span class="tag">Sales</span>
+            <h3>Copilot sales conversations</h3>
+            <p>Practice discovering customer needs and connecting Copilot capabilities to customer outcomes.</p>
+            <p class="status">Proposed session; date and registration to be confirmed</p>
+          </article>
+          <article class="card">
             <span class="tag tag--deliver">Customer delivery</span>
             <h3>Partner delivery preparation</h3>
             <p>Explore how to apply Copilot skills when delivering on behalf of GitHub.</p>
@@ -122,7 +154,7 @@
     <section id="showcase" class="section section--soft">
       <div class="container">
         <h2>Showcase your work</h2>
-        <p>Explore what peers are building and share links to your own repositories, demos, and lessons learned.</p>
+        <p>Learn from peers across both journeys. Share repositories, demos, reusable workflows, and lessons from customer conversations.</p>
         <p class="placeholder-note">Example showcase slots. Links will be added as contributions are approved; these are not published projects.</p>
         <div class="grid grid-3 section-grid">
           <article class="card">
@@ -138,13 +170,19 @@
             <p class="status">Example or walkthrough link pending</p>
           </article>
           <article class="card">
+            <span class="tag">Sales</span>
+            <h3>Discovery and value-conversation lessons</h3>
+            <p>Share an approved, anonymized example of how you connected a customer need to a Copilot use case.</p>
+            <p class="status">Peer-learning example pending</p>
+          </article>
+          <article class="card">
             <span class="tag tag--deliver">Customer delivery</span>
             <h3>Customer engagement lessons</h3>
             <p>Share an approved, anonymized case study with practical takeaways for other delivery practitioners.</p>
             <p class="status">Case study link pending</p>
           </article>
         </div>
-        <p style="margin-top:1.5rem;margin-bottom:0">To contribute, include a title, your level, a link to the work, and a short takeaway. Submission details are coming soon. Customer examples must be anonymized and approved for sharing.</p>
+        <p style="margin-top:1.5rem;margin-bottom:0">To contribute, include a title, your journey (and learning level, if relevant), a link to the work, and a short takeaway. Submission details are coming soon. Customer examples must be anonymized and approved for sharing.</p>
       </div>
     </section>
 
@@ -152,6 +190,14 @@
       <div class="container">
         <h2>Frequently asked questions</h2>
         <div class="faq-list">
+          <details class="faq">
+            <summary>Which journey should I choose?</summary>
+            <div>The <a href="#journey">Use &amp; build with Copilot</a> user journey is for everyone, including sellers, who wants to develop hands-on Copilot skills or prepare for customer delivery. Choose <a href="sales.html">Sell GitHub Copilot</a> for Partner Guides, Sales Credentials, Tech Forum, and PKO Session Recordings. These journeys represent learning goals, not exclusive roles. You can explore both; the learning levels are not a required sequence for the seller journey.</div>
+          </details>
+          <details class="faq">
+            <summary>Are Sales Credentials the same as certifications or Partner Delivery Credentials?</summary>
+            <div>No. Sales Credentials have a separate place in the seller resource hub. Certifications validate your own knowledge and skills, while Partner Delivery Credentials support delivering customer engagements on behalf of GitHub. Seller credential details and requirements will be added when confirmed; do not treat certification or delivery milestones as seller prerequisites.</div>
+          </details>
           <details class="faq">
             <summary>Do I have to complete every level in order?</summary>
             <div>No. Start with the level that matches your experience. If the topics feel unfamiliar, revisit the previous level.</div>
@@ -182,7 +228,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">IBM x GitHub Copilot learning pathways</div>
+    <div class="container">Example layout for review. Course-to-level mapping is proposed. <a href="./#audiences">Choose your journey</a></div>
   </footer>
 </body>
 </html>
