@@ -14,16 +14,23 @@
     .resource-card .btn { margin-top: auto; }
     .resource-section { scroll-margin-top: 90px; }
     .resource-section .grid { margin-top: 1.5rem; }
-    .credential-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .credential-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .credential-card { color: var(--text); text-decoration: none; }
+    .credential-card:hover { border-color: var(--ibm-blue); background: #f6f8fa; }
+    .credential-card h3 { margin-bottom: 0; }
+    .credential-card p { margin-bottom: 0; }
+    .credential-duration { font-size: .85em; font-weight: 400; color: var(--muted); }
+    .credential-access { font-size: .75rem; color: var(--muted); }
+    .catalog-card { display: block; margin-top: 1rem; color: var(--text); text-decoration: none; }
+    .catalog-card:hover { border-color: var(--ibm-blue); background: #f6f8fa; }
+    .catalog-card h3 { color: var(--ibm-blue-dark); }
+    .catalog-card p { margin-bottom: 0; }
     .status { margin-top: auto; margin-bottom: 0; font-size: .85rem; color: var(--muted); }
     .milestone-note { margin-top: 1.5rem; max-width: 85ch; }
     .shared-links { display: flex; flex-wrap: wrap; gap: 1rem; }
     a:focus-visible { outline: 3px solid var(--ibm-blue); outline-offset: 4px; }
-    @media (max-width: 760px) {
-      .credential-grid { grid-template-columns: 1fr; }
-    }
     @media (max-width: 640px) {
-      .resource-grid { grid-template-columns: 1fr; }
+      .resource-grid, .credential-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -49,7 +56,7 @@
         <h1>Sell GitHub Copilot</h1>
         <p class="lede">Build the knowledge to discover customer needs, communicate value, and guide the next conversation.</p>
         <p>Explore sales resources by topic, not learning level. Everyone, including sellers, is welcome to develop hands-on Copilot skills through the <a href="./#journey">Use &amp; build with Copilot</a> user journey. You can explore both journeys.</p>
-        <p class="placeholder-note">Seller resource hub layout for review. Resource details and access links will be added when confirmed.</p>
+        <p class="placeholder-note">Seller resource hub layout for review. Some resources and access links remain placeholders pending confirmation.</p>
         <nav class="grid resource-grid" aria-label="Seller resource sections">
           <article class="card resource-card">
             <h2>Partner Guides</h2>
@@ -58,7 +65,7 @@
           </article>
           <article class="card resource-card">
             <h2>Sales Credentials</h2>
-            <p>Explore Sales motion, Platform, and Copilot credential resources.</p>
+            <p>Explore featured Sales Motion and Copilot credentials, plus the full catalog.</p>
             <a class="btn btn--primary" href="#sales-credentials">Explore Sales Credentials</a>
           </article>
           <article class="card resource-card">
@@ -90,28 +97,28 @@
     <section id="sales-credentials" class="section resource-section">
       <div class="container">
         <h2>Sales Credentials</h2>
-        <p>Three dedicated areas for seller credential resources. Details and enrollment links will be added when confirmed.</p>
+        <p>These featured credentials focus on GitHub Copilot and relevant sales conversations.</p>
         <div class="grid credential-grid">
-          <article class="card resource-card">
+          <a class="card resource-card credential-card" href="https://portal.github.partners/#/learning/certifications/8a99824a99b5c4e10199cb9586b22695">
             <span class="tag">Sales Credential</span>
-            <h3>Sales motion</h3>
-            <p>Space for Sales motion credential details and enrollment information.</p>
-            <p class="status">Resources to be confirmed</p>
-          </article>
-          <article class="card resource-card">
+            <h3>GitHub Sales Motion Credential <span class="credential-duration">(Est. completion time: 90 min)</span></h3>
+            <p>This course helps sellers recognize customer opportunities and confidently lead conversations using the Scale, Innovate, and Trust motions.</p>
+            <span class="credential-access">Access to the GitHub Partner Portal is required.</span>
+          </a>
+          <a class="card resource-card credential-card" href="https://portal.github.partners/#/learning/certifications/8a998d9c99f85454019a5f3eade4036f">
             <span class="tag">Sales Credential</span>
-            <h3>Platform</h3>
-            <p>Space for Platform credential details and enrollment information.</p>
-            <p class="status">Resources to be confirmed</p>
-          </article>
-          <article class="card resource-card">
-            <span class="tag">Sales Credential</span>
-            <h3>Copilot</h3>
-            <p>Space for Copilot credential details and enrollment information.</p>
-            <p class="status">Resources to be confirmed</p>
-          </article>
+            <h3>GitHub Copilot Sales Credential <span class="credential-duration">(Est. completion time: 90 min)</span></h3>
+            <p>Empower your customers to accelerate software development with GitHub Copilot.</p>
+            <span class="credential-access">Access to the GitHub Partner Portal is required.</span>
+          </a>
         </div>
-        <p class="placeholder-note milestone-note">Sales Credentials are distinct from certifications and Partner Delivery Credentials. Certification and delivery milestones remain in the <a href="pathways.html#proficient-certify">user learning pathways</a>; they are not presented as seller prerequisites. Seller credential requirements will be added when confirmed.</p>
+        <p class="placeholder-note milestone-note">These credentials were selected because they are specifically relevant to GitHub Copilot. This is not an exhaustive list of available Sales Credentials.</p>
+        <a class="card catalog-card" href="https://portal.github.partners/#/page/credentials">
+          <h3>Explore other Sales Credentials</h3>
+          <p>Browse the full catalog to discover other Sales Credentials available in the GitHub Partner Portal.</p>
+          <span class="credential-access">Access to the GitHub Partner Portal is required.</span>
+        </a>
+        <p class="placeholder-note milestone-note">Sales Credentials are distinct from certifications and Partner Delivery Credentials. Certification and delivery milestones remain in the <a href="pathways.html#proficient-certify">user learning pathways</a>; they are not presented as seller prerequisites.</p>
       </div>
     </section>
 
